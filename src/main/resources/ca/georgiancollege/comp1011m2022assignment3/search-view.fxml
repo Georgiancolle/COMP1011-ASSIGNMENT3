@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1011m2022ice9.SearchViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1011m2022assignment3.SearchViewController">
    <children>
       <BorderPane fx:id="boderPane" layoutX="60.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -31,6 +30,9 @@
                </children>
             </VBox>
          </right>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#viewDetailsButtonClicked" text="ViewDetails" BorderPane.alignment="BOTTOM_RIGHT" />
+         </bottom>
       </BorderPane>
    </children>
 </AnchorPane>
