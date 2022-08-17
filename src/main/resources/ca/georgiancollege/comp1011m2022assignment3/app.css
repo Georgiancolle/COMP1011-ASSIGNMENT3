@@ -1,0 +1,14 @@
+.lables
+{
+-fx-font-size:30px;
+}
+.btn{
+-fx-background-color:"Red";
+}
+.borderpane{
+-fx-color:"cyan"
+}
+.grid-pane-border{
+-fx-border-style: none none solid none;
+-fx-border-color:black;
+}
