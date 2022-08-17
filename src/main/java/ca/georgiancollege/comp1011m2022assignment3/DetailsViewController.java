@@ -40,6 +40,20 @@ public class DetailsViewController implements Initializable {
 
     }
 
+
+    public void transferDetails(String details, String posterURL){
+        System.out.println(details);
+        System.out.println(posterURL);
+        this.movieDetails.setText(details);
+
+        try
+        {
+            this.imageView.setImage(new Image(posterURL));
+        }catch(Exception e) {
+
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

@@ -51,9 +51,31 @@ public class SearchViewController implements Initializable
 
     @FXML
     void viewDetailsButtonClicked(ActionEvent event) {
+        String selectedMovie = String.valueOf(resultsListView.getSelectionModel().getSelectedItem());
+        String[] details = selectedMovie.split(",");
+        var movieDetails = APIManager.Instance().getMovieFromOMDBByTitleAndYear(details[0].substring(7), details[1].substring(7));
 
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("details-view.fxml"));
+            Parent root = fxmlLoader.load();
+            DetailsViewController detailsViewController = fxmlLoader.getController();
+            detailsViewController.transferDetails(movieDetails.movieDetails(),movieDetails.getPoster());
+            Scene scene = new Scene(root);
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle("Movie Details");
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
+    @FXML
+    void submitSearchedText(ActionEvent event) {
+        searchButtonClicked(event);
+        resultsListView.requestFocus();
+
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         var posterNotFoundImage=new Image("https://trailerfailure.com/img/images/missingConverphoto.jpg");

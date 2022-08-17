@@ -202,4 +202,11 @@ public class Movie
     }
 
 
+    public String movieDetails() {
+        return String.format("Title: %s%nYear: %s%nRated: %s%nReleased: %s%nRuntime: %s%nGenre: %s%nDirector: %s%nWriters: %s%nActors: %s%nPlot: %s%nPoster: %s%nIMDB ID: %s%nType: %s%n",
+                  getTitle(), getYear(), getRated(), getReleased(), getRuntime(), getGenre(), getDirector(),
+                  getWriters(), getActors(), getPlot(), getPoster(), getIMDB_ID(), getType());
+
+
+    }
 }

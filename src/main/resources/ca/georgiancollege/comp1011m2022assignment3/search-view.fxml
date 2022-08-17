@@ -15,7 +15,7 @@
          <top>
             <HBox prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="searchTextField" promptText="Movie Title" />
+                  <TextField fx:id="searchTextField" onAction="#submitSearchedText" promptText="Movie Title" />
                   <Button mnemonicParsing="false" onAction="#searchButtonClicked" text="Search" />
                </children>
             </HBox>
