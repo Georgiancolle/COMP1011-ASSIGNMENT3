@@ -41,9 +41,7 @@ public class DetailsViewController implements Initializable {
     }
 
 
-    public void transferDetails(String details, String posterURL){
-        System.out.println(details);
-        System.out.println(posterURL);
+    public void displayDetails(String details, String posterURL){
         this.movieDetails.setText(details);
 
         try

@@ -59,7 +59,7 @@ public class SearchViewController implements Initializable
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("details-view.fxml"));
             Parent root = fxmlLoader.load();
             DetailsViewController detailsViewController = fxmlLoader.getController();
-            detailsViewController.transferDetails(movieDetails.movieDetails(),movieDetails.getPoster());
+            detailsViewController.displayDetails(movieDetails.movieDetails(),movieDetails.getPoster());
             Scene scene = new Scene(root);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
@@ -88,9 +88,7 @@ public class SearchViewController implements Initializable
                 }
 
             }catch (IllegalArgumentException e){
-
-                    imageView.setImage(new Image("posterNotFoundImage"));
-
+                imageView.setImage(new Image("posterNotFoundImage"));
             }
         });
     }
